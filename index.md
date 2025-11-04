@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the NeSI infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
+**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
 
 A lot of genomics analysis is done using command-line tools for three reasons:
 
@@ -33,8 +33,8 @@ before starting this lesson.
 This lesson also assumes some familiarity with biological concepts, including the structure of DNA, nucleotide abbreviations, and the
 concept of genomic variation within a population.
 
-This lesson uses data hosted on NeSI. Workshop participants will be given information on how
-to log-in to NeSI during the workshop. Learners using these materials for self-directed study will need to set up their own
+This lesson uses data hosted on the REANNZ HPC. Workshop participants will be given information on how
+to log-in to the REANNZ HPC during the workshop. Learners using these materials for self-directed study will need to set up their own
 AMI. Information on setting up an AMI and accessing the required data is provided on the original [Genomics Workshop setup page](https://www.datacarpentry.org/genomics-workshop/setup.html).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

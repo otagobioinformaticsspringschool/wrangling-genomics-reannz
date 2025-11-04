@@ -18,7 +18,7 @@ exercises: 25
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the NeSI infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
+**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
 
 ## Cleaning reads
 
@@ -124,7 +124,7 @@ to separate code chunks onto separate lines. This can make your code more readab
 Now we will run Trimmomatic on our data. To begin, navigate to your `untrimmed_fastq` data directory:
 
 ```bash
-$ cd ~/obss_2024/genomic_dna/data/untrimmed_fastq
+$ cd ~/obss_2025/genomic_dna/data/untrimmed_fastq
 ```
 
 We are going to run Trimmomatic on one of our paired-end samples.
@@ -132,7 +132,7 @@ While using FastQC we saw that Nextera adapters were present in our samples.
 The adapter sequences came with the installation of trimmomatic, so we will first copy these sequences into our current directory.
 
 ```bash
-$ ~/obss_2024/genomic_dna/adapters/NexteraPE-PE.fa .
+$ ~/obss_2025/genomic_dna/adapters/NexteraPE-PE.fa .
 ```
 
 We will also use a sliding window of size 4 that will remove bases if their
@@ -273,7 +273,7 @@ What other adapter files came with Trimmomatic?
 ## Solution
 
 ```bash
-$ ls ~/obss_2024/genomic_dna/adapters/
+$ ls ~/obss_2025/genomic_dna/adapters/
 ```
 
 ```output
@@ -290,7 +290,7 @@ control process! Before we move on, let's move our trimmed FASTQ files
 to a new subdirectory within our `data/` directory.
 
 ```bash
-$ cd ~/obss_2024/genomic_dna/data/untrimmed_fastq
+$ cd ~/obss_2025/genomic_dna/data/untrimmed_fastq
 $ mkdir ../trimmed_fastq
 $ mv *.trim* ../trimmed_fastq
 $ cd ../trimmed_fastq

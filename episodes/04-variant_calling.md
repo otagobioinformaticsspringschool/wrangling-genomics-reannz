@@ -18,7 +18,7 @@ exercises: 40
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the NeSI infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
+**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
 
 We mentioned before that we are working with files from a long-term evolution study of an _E. coli_ population (designated Ara-3). Now that we have looked at our data to make sure that it is high quality, and removed low-quality base calls, we can perform variant calling to see how the population changed over time. We care how this population changed relative to the original population, _E. coli_ strain REL606. Therefore, we will align each of our samples to the _E. coli_ REL606 reference genome, and see what differences exist in our reads versus the genome.
 
@@ -41,7 +41,7 @@ The alignment process consists of two steps:
 First we download the reference genome for _E. coli_ REL606. Although we could copy or move the file with `cp` or `mv`, most genomics workflows begin with a download step, so we will practice that here.
 
 ```bash
-$ cd ~/obss_2024/genomic_dna
+$ cd ~/obss_2025/genomic_dna
 $ mkdir -p data/ref_genome
 $ curl -L -o data/ref_genome/ecoli_rel606.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/017/985/GCA_000017985.1_ASM1798v1/GCA_000017985.1_ASM1798v1_genomic.fna.gz
 $ gunzip data/ref_genome/ecoli_rel606.fasta.gz
@@ -75,7 +75,7 @@ and will enable us to run our variant calling workflow quite quickly.
 ```bash
 $ curl -L -o sub.tar.gz https://ndownloader.figshare.com/files/14418248
 $ tar xvf sub.tar.gz
-$ mv sub/ ~/obss_2024/genomic_dna/data/trimmed_fastq_small
+$ mv sub/ ~/obss_2025/genomic_dna/data/trimmed_fastq_small
 ```
 
 You will also need to create directories for the results that will be generated as part of this workflow. We can do this in a single
@@ -479,7 +479,7 @@ position 4377265? What is the canonical nucleotide in that position?
 ### Solution
 
 ```bash
-$ samtools tview ~/obss_2024/genomic_dna/results/bam/SRR2584866.aligned.sorted.bam ~/obss_2024/genomic_dna/data/ref_genome/ecoli_rel606.fasta
+$ samtools tview ~/obss_2025/genomic_dna/results/bam/SRR2584866.aligned.sorted.bam ~/obss_2025/genomic_dna/data/ref_genome/ecoli_rel606.fasta
 ```
 
 Then type `g`. In the dialogue box, type `CP000819.1:4377265`.

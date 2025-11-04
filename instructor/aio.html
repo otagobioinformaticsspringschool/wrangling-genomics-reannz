@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Data Wrangling and Processing for Genomics (modified for NeSI): All in One View</title>
+<title>Data Wrangling and Processing for Genomics (modified for the REANNZ HPC): All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="../assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -85,7 +85,7 @@
       <img class="small-logo" alt="Data Carpentry" src="../assets/images/data-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Data Wrangling and Processing for Genomics (modified for NeSI)
+      Data Wrangling and Processing for Genomics (modified for the REANNZ HPC)
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -96,7 +96,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Data Wrangling and Processing for Genomics (modified for NeSI)
+            Data Wrangling and Processing for Genomics (modified for the REANNZ HPC)
           </span>
         </li>
         <li class="nav-item">
@@ -134,7 +134,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Data Wrangling and Processing for Genomics (modified for NeSI)
+  Data Wrangling and Processing for Genomics (modified for the REANNZ HPC)
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -353,7 +353,7 @@
 <hr>
 <p>Last updated on 2025-11-04 |
 
-        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/edit/main/episodes/01-background.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/01-background.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -582,7 +582,7 @@ metadata.</li>
 <hr>
 <p>Last updated on 2025-11-04 |
 
-        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/edit/main/episodes/02-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/02-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -617,8 +617,9 @@ files.</li>
 </div>
 </div>
 <p><strong>This lesson has been adapted from the original <a href="https://datacarpentry.org/wrangling-genomics/" class="external-link">Data Carpentry -
-Wrangling Genomics</a> to be run using the NeSI infrastructure as part
-of the Otago Bioinformatics Spring School instead of AWS.</strong></p>
+Wrangling Genomics</a> to be run using the the REANNZ HPC infrastructure
+as part of the Otago Bioinformatics Spring School instead of
+AWS.</strong></p>
 <section><h2 class="section-heading" id="bioinformatic-workflows">Bioinformatic workflows<a class="anchor" aria-label="anchor" href="#bioinformatic-workflows"></a>
 </h2>
 <hr class="half-width">
@@ -670,10 +671,10 @@ functional annotation.” The ENA also provides sequencing data in the
 fastq format, an important format for sequencing reads that we will be
 learning about today.</p>
 <p>To save time, the data has already been downloaded for you and placed
-in <code>~/obss_2024/genomic_dna/data/untrimmed_fastq</code>.</p>
+in <code>~/obss_2025/genomic_dna/data/untrimmed_fastq</code>.</p>
 <p>Today we’re going to be working inside of
-<code>~/obss_2024/genomic_dna</code>. The main directory structure for
-<code>genomic_dna/</code> (inside of <code>~/obss_2024/</code>)
+<code>~/obss_2025/genomic_dna</code>. The main directory structure for
+<code>genomic_dna/</code> (inside of <code>~/obss_2025/</code>)
 currently looks like this currently</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -689,7 +690,7 @@ currently looks like this currently</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">cd</span> ~/obss_2024/genomic_dna/data/untrimmed_fastq</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">cd</span> ~/obss_2025/genomic_dna/data/untrimmed_fastq</span></code></pre>
 </div>
 <p>To download the data, run the commands below.</p>
 <p>Here we are using the <code>-p</code> option for <code>mkdir</code>.
@@ -698,14 +699,14 @@ if one of the parent directories does not already exist. It also
 supresses errors if the directory already exists, without overwriting
 that directory.</p>
 <p>It will take about 15 minutes to download the files.</p>
-<div id="original-way-to-obtain-the-data-use-if-not-on-nesi" class="callout">
+<div id="original-way-to-obtain-the-data-use-if-not-on-the-reannz-hpc" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="original-way-to-obtain-the-data-use-if-not-on-nesi" class="callout-inner">
+<div id="original-way-to-obtain-the-data-use-if-not-on-the-reannz-hpc" class="callout-inner">
 <h3 class="callout-title">Original way to obtain the data (Use if not on
-NeSI)</h3>
+the REANNZ HPC)</h3>
 <div class="callout-content">
 <p>To download the data, run the commands below.</p>
 <p>Here we are using the <code>-p</code> option for <code>mkdir</code>.
@@ -717,8 +718,8 @@ that directory.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/obss_2024/data/untrimmed_fastq/</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="bu">cd</span> ~/obss_2024/data/untrimmed_fastq</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/obss_2025/data/untrimmed_fastq/</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="bu">cd</span> ~/obss_2025/data/untrimmed_fastq</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_1.fastq.gz</span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_2.fastq.gz</span>
@@ -886,28 +887,29 @@ preinstalled.</p>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>On NeSI, we load the tools by running a script that has the needed
-software and versions specified.</p>
+<p>On the REANNZ HPC, we load the tools by running a script that has the
+needed software and versions specified.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> source ~/obss_2024/genomic_dna/modload.sh</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> source ~/obss_2025/genomic_dna/modload.sh</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="modules">Modules<a class="anchor" aria-label="anchor" href="#modules"></a>
 </h2>
-<p>On NeSI, software is managed through <code>modules</code> which
-enable many versions of the same program to co-exist. This particular
-<code>modload.sh</code> script contains the commands that loads the
-specific software modules needed for our analysis. It uses the
+<p>On the REANNZ HPC, software is managed through <code>modules</code>
+which enable many versions of the same program to co-exist. This
+particular <code>modload.sh</code> script contains the commands that
+loads the specific software modules needed for our analysis. It uses the
 <code>module load</code> command which is then followed by the module
 you wish to use. In the case of <code>fastqc</code> we use
 <code>module load FastQC</code>. To find the modules for software
-managed on NeSI you can use
+managed on the REANNZ HPC you can use
 <code>module spider &lt;program name&gt;</code>,
 e.g. <code>module spider fastqc</code> will return the names of the
 modules related to <code>fastqc</code>.</p>
-<p>For more information about using modules on NeSI see their <a href="https://support.nesi.org.nz/hc/en-gb/articles/360000360576" class="external-link">documentation</a>.</p>
+<p>For more information about using modules on the REANNZ HPC see their
+<a href="https://support.nesi.org.nz/hc/en-gb/articles/360000360576" class="external-link">documentation</a>.</p>
 </div>
 </div>
 </div>
@@ -1084,7 +1086,7 @@ directory</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/data/untrimmed_fastq/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/data/untrimmed_fastq/</span></code></pre>
 </div>
 <div id="exercise-1" class="callout challenge">
 <div class="callout-square">
@@ -1193,16 +1195,16 @@ will move these output files into a new directory within our
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="ex">$</span> mv <span class="pp">*</span>.zip ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="ex">$</span> mv <span class="pp">*</span>.html ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="ex">$</span> mv <span class="pp">*</span>.zip ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="ex">$</span> mv <span class="pp">*</span>.html ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
 </div>
 <p>Now we can navigate into this results directory and do some closer
 inspection of our output files.</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1570,11 +1572,11 @@ samples</p>
 <p>by concatenating all of our <code>summary.txt</code> files into a
 single file using the <code>cat</code> command. We will call this
 <code>fastqc_summaries.txt</code> and move it to
-<code>~/obss_2024/genomic_dna/docs</code>.</p>
+<code>~/obss_2025/genomic_dna/docs</code>.</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> cat <span class="pp">*</span>/summary.txt <span class="op">&gt;</span> ~/obss_2024/genomic_dna/docs/fastqc_summaries.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> cat <span class="pp">*</span>/summary.txt <span class="op">&gt;</span> ~/obss_2025/genomic_dna/docs/fastqc_summaries.txt</span></code></pre>
 </div>
 <div id="exercise-3" class="callout challenge">
 <div class="callout-square">
@@ -1600,7 +1602,7 @@ test(s) did those samples fail?</p>
 <div class="codewrapper sourceCode" id="cb44">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/docs</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/docs</span>
 <span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a><span class="ex">$</span> grep FAIL fastqc_summaries.txt</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1689,7 +1691,7 @@ multiple files with a single command.</li>
 <hr>
 <p>Last updated on 2025-11-04 |
 
-        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/edit/main/episodes/03-trimming.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/03-trimming.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 55 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -1724,8 +1726,9 @@ tools.</li>
 </div>
 </div>
 <p><strong>This lesson has been adapted from the original <a href="https://datacarpentry.org/wrangling-genomics/" class="external-link">Data Carpentry -
-Wrangling Genomics</a> to be run using the NeSI infrastructure as part
-of the Otago Bioinformatics Spring School instead of AWS.</strong></p>
+Wrangling Genomics</a> to be run using the the REANNZ HPC infrastructure
+as part of the Otago Bioinformatics Spring School instead of
+AWS.</strong></p>
 <section><h2 class="section-heading" id="cleaning-reads">Cleaning reads<a class="anchor" aria-label="anchor" href="#cleaning-reads"></a>
 </h2>
 <hr class="half-width">
@@ -1971,7 +1974,7 @@ your code more readable.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/data/untrimmed_fastq</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/data/untrimmed_fastq</span></code></pre>
 </div>
 <p>We are going to run Trimmomatic on one of our paired-end samples.
 While using FastQC we saw that Nextera adapters were present in our
@@ -1981,7 +1984,7 @@ directory.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> ~/obss_2024/genomic_dna/adapters/NexteraPE-PE.fa .</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> ~/obss_2025/genomic_dna/adapters/NexteraPE-PE.fa .</span></code></pre>
 </div>
 <p>We will also use a sliding window of size 4 that will remove bases if
 their phred score is below 20 (like in our example above). We will also
@@ -2039,7 +2042,7 @@ questions.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>0.23%</li>
@@ -2148,12 +2151,12 @@ Trimmomatic?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> ls ~/obss_2024/genomic_dna/adapters/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> ls ~/obss_2025/genomic_dna/adapters/</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2171,7 +2174,7 @@ to a new subdirectory within our <code>data/</code> directory.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/data/untrimmed_fastq</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/data/untrimmed_fastq</span>
 <span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="ex">$</span> mkdir ../trimmed_fastq</span>
 <span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="ex">$</span> mv <span class="pp">*</span>.trim<span class="pp">*</span> ../trimmed_fastq</span>
 <span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="ex">$</span> cd ../trimmed_fastq</span>
@@ -2205,7 +2208,7 @@ whether your per base sequence quality is higher after trimming.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Solution (for original lesson using AWS) </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>In your AWS terminal window do:</p>
 <div class="codewrapper sourceCode" id="cb20">
@@ -2254,7 +2257,7 @@ important!</li>
 <hr>
 <p>Last updated on 2025-11-04 |
 
-        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/edit/main/episodes/04-variant_calling.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/04-variant_calling.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 100 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -2289,8 +2292,9 @@ calling.</li>
 </div>
 </div>
 <p><strong>This lesson has been adapted from the original <a href="https://datacarpentry.org/wrangling-genomics/" class="external-link">Data Carpentry -
-Wrangling Genomics</a> to be run using the NeSI infrastructure as part
-of the Otago Bioinformatics Spring School instead of AWS.</strong></p>
+Wrangling Genomics</a> to be run using the the REANNZ HPC infrastructure
+as part of the Otago Bioinformatics Spring School instead of
+AWS.</strong></p>
 <p>We mentioned before that we are working with files from a long-term
 evolution study of an <em>E. coli</em> population (designated Ara-3).
 Now that we have looked at our data to make sure that it is high
@@ -2323,7 +2327,7 @@ we will practice that here.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> data/ref_genome</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-L</span> <span class="at">-o</span> data/ref_genome/ecoli_rel606.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/017/985/GCA_000017985.1_ASM1798v1/GCA_000017985.1_ASM1798v1_genomic.fna.gz</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">$</span> gunzip data/ref_genome/ecoli_rel606.fasta.gz</span></code></pre>
@@ -2347,7 +2351,7 @@ it. What is the real name of the genome?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2371,7 +2375,7 @@ run our variant calling workflow quite quickly.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-L</span> <span class="at">-o</span> sub.tar.gz https://ndownloader.figshare.com/files/14418248</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">$</span> tar xvf sub.tar.gz</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">$</span> mv sub/ ~/obss_2024/genomic_dna/data/trimmed_fastq_small</span></code></pre>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">$</span> mv sub/ ~/obss_2025/genomic_dna/data/trimmed_fastq_small</span></code></pre>
 </div>
 <p>You will also need to create directories for the results that will be
 generated as part of this workflow. We can do this in a single line of
@@ -2820,7 +2824,7 @@ learned to assess how many variants are in the vcf file.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2939,12 +2943,12 @@ canonical nucleotide in that position?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="ex">$</span> samtools tview ~/obss_2024/genomic_dna/results/bam/SRR2584866.aligned.sorted.bam ~/obss_2024/genomic_dna/data/ref_genome/ecoli_rel606.fasta</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="ex">$</span> samtools tview ~/obss_2025/genomic_dna/results/bam/SRR2584866.aligned.sorted.bam ~/obss_2025/genomic_dna/data/ref_genome/ecoli_rel606.fasta</span></code></pre>
 </div>
 <p>Then type <code>g</code>. In the dialogue box, type
 <code>CP000819.1:4377265</code>. <code>G</code> is the variant.
@@ -3096,7 +3100,7 @@ file, and how it was derived.</li>
 <hr>
 <p>Last updated on 2025-11-04 |
 
-        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/edit/main/episodes/05-automation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/05-automation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 45 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -3128,8 +3132,9 @@ file, and how it was derived.</li>
 </div>
 </div>
 <p><strong>This lesson has been adapted from the original <a href="https://datacarpentry.org/wrangling-genomics/" class="external-link">Data Carpentry -
-Wrangling Genomics</a> to be run using the NeSI infrastructure as part
-of the Otago Bioinformatics Spring School instead of AWS.</strong></p>
+Wrangling Genomics</a> to be run using the the REANNZ HPC infrastructure
+as part of the Otago Bioinformatics Spring School instead of
+AWS.</strong></p>
 <section><h2 class="section-heading" id="what-is-a-shell-script">What is a shell script?<a class="anchor" aria-label="anchor" href="#what-is-a-shell-script"></a>
 </h2>
 <hr class="half-width">
@@ -3224,8 +3229,8 @@ file.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/obss_2024/genomic_dna/scripts</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/scripts</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/obss_2025/genomic_dna/scripts</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/scripts</span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="ex">$</span> touch read_qc.sh</span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
@@ -3253,9 +3258,9 @@ directory when we run our script.</p>
 </h3>
 <pre class="output" tabindex="0"><code>set -e
 # load the needed modules
-source ~/obss_2024/genomic_dna/modload.sh
+source ~/obss_2025/genomic_dna/modload.sh
 
-cd ~/obss_2024/genomic_dna/data/untrimmed_fastq/</code></pre>
+cd ~/obss_2025/genomic_dna/data/untrimmed_fastq/</code></pre>
 </div>
 <p>These next two lines will give us a status message to tell us that we
 are currently running FastQC, then will run FastQC on all of the files
@@ -3274,7 +3279,7 @@ directory structure you think you do.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>mkdir -p ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads</code></pre>
+<pre class="output" tabindex="0"><code>mkdir -p ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads</code></pre>
 </div>
 <p>Our next three lines first give us a status message to tell us we are
 saving the results from FastQC, then moves all of the files with a
@@ -3284,15 +3289,15 @@ just created for storing our FastQC results.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>echo "Saving FastQC results..."
-mv *.zip ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/
-mv *.html ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/</code></pre>
+mv *.zip ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
+mv *.html ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</code></pre>
 </div>
 <p>The next line moves us to the results directory where we have stored
 our output.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>cd ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/</code></pre>
+<pre class="output" tabindex="0"><code>cd ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</code></pre>
 </div>
 <p>The next five lines should look very familiar. First we give
 ourselves a status message to tell us that we are unzipping our ZIP
@@ -3314,7 +3319,7 @@ doing.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>echo "Saving summary..."
-cat */summary.txt &gt; ~/obss_2024/genomic_dna/docs/fastqc_summaries.txt</code></pre>
+cat */summary.txt &gt; ~/obss_2025/genomic_dna/docs/fastqc_summaries.txt</code></pre>
 </div>
 <div id="using-echo-statements" class="callout">
 <div class="callout-square">
@@ -3338,20 +3343,20 @@ progressed.</p>
 <pre class="output" tabindex="0"><code>set -e
 
 # load the needed modules
-source ~/obss_2024/genomic_dna/modload.sh
+source ~/obss_2025/genomic_dna/modload.sh
 
-cd ~/obss_2024/genomic_dna/data/untrimmed_fastq/
+cd ~/obss_2025/genomic_dna/data/untrimmed_fastq/
 
 echo "Running FastQC ..."
 fastqc *.fastq*
 
-mkdir -p ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads
+mkdir -p ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads
 
 echo "Saving FastQC results..."
-mv *.zip ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/
-mv *.html ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/
+mv *.zip ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
+mv *.html ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
 
-cd ~/obss_2024/genomic_dna/results/fastqc_untrimmed_reads/
+cd ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
 
 echo "Unzipping..."
 for filename in *.zip
@@ -3360,7 +3365,7 @@ for filename in *.zip
     done
 
 echo "Saving summary..."
-cat */summary.txt &gt; ~/obss_2024/genomic_dna/docs/fastqc_summaries.txt</code></pre>
+cat */summary.txt &gt; ~/obss_2025/genomic_dna/docs/fastqc_summaries.txt</code></pre>
 </div>
 <p>Save your file and exit <code>nano</code>. We can now run our
 script:</p>
@@ -3403,12 +3408,12 @@ we wrote before, put them into a single file, add variables so that the
 script knows to iterate through our input files and write to the
 appropriate output files. This is very similar to what we did with our
 <code>read_qc.sh</code> script, but will be a bit more complex.</p>
-<p>Download the script from <a href="../files/run_variant_calling_nesi.sh">here</a>. Download to
-<code>~/obss_2024/genomic_dna/scripts</code>.</p>
+<p>Download the script from <a href="../files/run_variant_calling_reannz.sh">here</a>. Download to
+<code>~/obss_2025/genomic_dna/scripts</code>.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://otagobioinformaticsspringschool.github.io/wrangling-genomics-nesi/files/run_variant_calling_nesi.sh</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/files/run_variant_calling_reannz.sh</span></code></pre>
 </div>
 <p>Our variant calling workflow has the following steps:</p>
 <ol style="list-style-type: decimal">
@@ -3424,8 +3429,8 @@ intermediate steps.</li>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2024/genomic_dna/scripts</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="ex">$</span> less run_variant_calling_nesi.sh</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/scripts</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="ex">$</span> less run_variant_calling_reannz.sh</span></code></pre>
 </div>
 <p>The script should look like this:</p>
 <div class="codewrapper">
@@ -3434,31 +3439,31 @@ intermediate steps.</li>
 <pre class="output" tabindex="0"><code>set -e
 
 # load the needed modules
-source ~/obss_2024/genomic_dna/modload.sh
+source ~/obss_2025/genomic_dna/modload.sh
 
-cd ~/obss_2024/genomic_dna/results
+cd ~/obss_2025/genomic_dna/results
 
-genome=~/obss_2024/genomic_dna/data/ref_genome/ecoli_rel606.fasta
+genome=~/obss_2025/genomic_dna/data/ref_genome/ecoli_rel606.fasta
 
 bwa index $genome
 
 mkdir -p sam bam bcf vcf
 
-for fq1 in ~/obss_2024/genomic_dna/data/trimmed_fastq_small/*_1.trim.sub.fastq
+for fq1 in ~/obss_2025/genomic_dna/data/trimmed_fastq_small/*_1.trim.sub.fastq
     do
     echo "working with file $fq1"
 
     base=$(basename $fq1 _1.trim.sub.fastq)
     echo "base name is $base"
 
-    fq1=~/obss_2024/genomic_dna/data/trimmed_fastq_small/${base}_1.trim.sub.fastq
-    fq2=~/obss_2024/genomic_dna/data/trimmed_fastq_small/${base}_2.trim.sub.fastq
-    sam=~/obss_2024/genomic_dna/results/sam/${base}.aligned.sam
-    bam=~/obss_2024/genomic_dna/results/bam/${base}.aligned.bam
-    sorted_bam=~/obss_2024/genomic_dna/results/bam/${base}.aligned.sorted.bam
-    raw_bcf=~/obss_2024/genomic_dna/results/bcf/${base}_raw.bcf
-    variants=~/obss_2024/genomic_dna/results/bcf/${base}_variants.vcf
-    final_variants=~/obss_2024/genomic_dna/results/vcf/${base}_final_variants.vcf
+    fq1=~/obss_2025/genomic_dna/data/trimmed_fastq_small/${base}_1.trim.sub.fastq
+    fq2=~/obss_2025/genomic_dna/data/trimmed_fastq_small/${base}_2.trim.sub.fastq
+    sam=~/obss_2025/genomic_dna/results/sam/${base}.aligned.sam
+    bam=~/obss_2025/genomic_dna/results/bam/${base}.aligned.bam
+    sorted_bam=~/obss_2025/genomic_dna/results/bam/${base}.aligned.sorted.bam
+    raw_bcf=~/obss_2025/genomic_dna/results/bcf/${base}_raw.bcf
+    variants=~/obss_2025/genomic_dna/results/bcf/${base}_variants.vcf
+    final_variants=~/obss_2025/genomic_dna/results/vcf/${base}_final_variants.vcf
 
     bwa mem $genome $fq1 $fq2 &gt; $sam
     samtools view -S -b $sam &gt; $bam
@@ -3476,7 +3481,7 @@ create new results subdirectories in the right location.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>cd ~/obss_2024/genomic_dna/results</code></pre>
+<pre class="output" tabindex="0"><code>cd ~/obss_2025/genomic_dna/results</code></pre>
 </div>
 <p>Next we tell our script where to find the reference genome by
 assigning the <code>genome</code> variable to the path to our reference
@@ -3484,7 +3489,7 @@ genome:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>genome=~/obss_2024/genomic_dna/data/ref_genome/ecoli_rel606.fasta</code></pre>
+<pre class="output" tabindex="0"><code>genome=~/obss_2025/genomic_dna/data/ref_genome/ecoli_rel606.fasta</code></pre>
 </div>
 <p>Next we index our reference genome for BWA:</p>
 <div class="codewrapper">
@@ -3511,7 +3516,7 @@ which file we are on.</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="cf">for</span> fq1 <span class="kw">in</span> ~/obss_2024/genomic_dna/data/trimmed_fastq_small/<span class="pp">*</span>_1.trim.sub.fastq</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="cf">for</span> fq1 <span class="kw">in</span> ~/obss_2025/genomic_dna/data/trimmed_fastq_small/<span class="pp">*</span>_1.trim.sub.fastq</span>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>    <span class="cf">do</span></span>
 <span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"working with file </span><span class="va">$fq1</span><span class="st">"</span></span></code></pre>
 </div>
@@ -3535,16 +3540,16 @@ but add a different extension (e.g. <code>.sam</code>,
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>    <span class="co">#input fastq files</span></span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>    <span class="va">fq1</span><span class="op">=</span>~/obss_2024/genomic_dna/data/trimmed_fastq_small/<span class="va">${base}</span>_1.trim.sub.fastq</span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>    <span class="va">fq2</span><span class="op">=</span>~/obss_2024/genomic_dna/data/trimmed_fastq_small/<span class="va">${base}</span>_2.trim.sub.fastq</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>    <span class="va">fq1</span><span class="op">=</span>~/obss_2025/genomic_dna/data/trimmed_fastq_small/<span class="va">${base}</span>_1.trim.sub.fastq</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>    <span class="va">fq2</span><span class="op">=</span>~/obss_2025/genomic_dna/data/trimmed_fastq_small/<span class="va">${base}</span>_2.trim.sub.fastq</span>
 <span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a></span>
 <span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>    <span class="co"># output files</span></span>
-<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>    <span class="va">sam</span><span class="op">=</span>~/obss_2024/genomic_dna/results/sam/<span class="va">${base}</span>.aligned.sam</span>
-<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>    <span class="va">bam</span><span class="op">=</span>~/obss_2024/genomic_dna/results/bam/<span class="va">${base}</span>.aligned.bam</span>
-<span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>    <span class="va">sorted_bam</span><span class="op">=</span>~/obss_2024/genomic_dna/results/bam/<span class="va">${base}</span>.aligned.sorted.bam</span>
-<span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a>    <span class="va">raw_bcf</span><span class="op">=</span>~/obss_2024/genomic_dna/results/bcf/<span class="va">${base}</span>_raw.bcf</span>
-<span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>    <span class="va">variants</span><span class="op">=</span>~/obss_2024/genomic_dna/results/bcf/<span class="va">${base}</span>_variants.vcf</span>
-<span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a>    <span class="va">final_variants</span><span class="op">=</span>~/obss_2024/genomic_dna/results/vcf/<span class="va">${base}</span>_final_variants.vcf</span></code></pre>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>    <span class="va">sam</span><span class="op">=</span>~/obss_2025/genomic_dna/results/sam/<span class="va">${base}</span>.aligned.sam</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>    <span class="va">bam</span><span class="op">=</span>~/obss_2025/genomic_dna/results/bam/<span class="va">${base}</span>.aligned.bam</span>
+<span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>    <span class="va">sorted_bam</span><span class="op">=</span>~/obss_2025/genomic_dna/results/bam/<span class="va">${base}</span>.aligned.sorted.bam</span>
+<span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a>    <span class="va">raw_bcf</span><span class="op">=</span>~/obss_2025/genomic_dna/results/bcf/<span class="va">${base}</span>_raw.bcf</span>
+<span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>    <span class="va">variants</span><span class="op">=</span>~/obss_2025/genomic_dna/results/bcf/<span class="va">${base}</span>_variants.vcf</span>
+<span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a>    <span class="va">final_variants</span><span class="op">=</span>~/obss_2025/genomic_dna/results/vcf/<span class="va">${base}</span>_final_variants.vcf</span></code></pre>
 </div>
 <p>And finally, the actual workflow steps:</p>
 <ol style="list-style-type: decimal">
@@ -3625,7 +3630,7 @@ code).</p>
 <div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="ex">$</span> bash run_variant_calling_nesi.sh</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="ex">$</span> bash run_variant_calling_reannz.sh</span></code></pre>
 </div>
 <div id="exercise-1" class="callout challenge">
 <div class="callout-square">
@@ -3655,12 +3660,12 @@ directory.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">$</span> for infile in ~/obss_2024/genomic_dna/results/vcf/<span class="pp">*</span>_final_variants.vcf</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">$</span> for infile in ~/obss_2025/genomic_dna/results/vcf/<span class="pp">*</span>_final_variants.vcf</span>
 <span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a><span class="op">&gt;</span> do</span>
 <span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">${infile}</span></span>
 <span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a><span class="op">&gt;</span>     grep <span class="ex">-v</span> <span class="st">"#"</span> <span class="va">${infile}</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
@@ -3683,10 +3688,10 @@ phenotype had evolved, causing this strain to have more mutations.</p>
 <h3 class="callout-title">Bonus exercise</h3>
 <div class="callout-content">
 <p>If you have time after completing the previous exercise, use
-<code>run_variant_calling_nesi.sh</code> to run the variant calling
+<code>run_variant_calling_reannz.sh</code> to run the variant calling
 pipeline on the full-sized trimmed FASTQ files. You should have a copy
 of these already in
-<code>~/obss_2024/genomic_dna/data/trimmed_fastq</code>, but if you do
+<code>~/obss_2025/genomic_dna/data/trimmed_fastq</code>, but if you do
 not, there is a copy in
 <code>~/.solutions/wrangling-solutions/trimmed_fastq</code>. Does the
 number of variants change per sample?</p>
@@ -3722,12 +3727,12 @@ automated progress update.</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-nesi/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -3747,15 +3752,15 @@ automated progress update.</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-nesi/instructor/aio.html",
+  "@id": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/instructor/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-nesi/instructor/aio.html",
-  "identifier": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-nesi/instructor/aio.html",
+  "url": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/instructor/aio.html",
+  "identifier": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/instructor/aio.html",
   "dateCreated": "2015-03-24",
   "dateModified": "2025-11-04",
   "datePublished": "2025-11-04"

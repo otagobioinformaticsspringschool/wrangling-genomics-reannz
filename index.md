@@ -1,8 +1,9 @@
 ---
 site: sandpaper::sandpaper_site
 ---
+::::::::::::::::: note
 
-**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
+**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
 
 A lot of genomics analysis is done using command-line tools for three reasons:
 
@@ -22,6 +23,9 @@ samples.
 As you progress through this lesson, keep in mind that, even if you aren't going to be doing this same workflow in your research,
 you will be learning some very important lessons about using command-line bioinformatic tools. What you learn here will enable you to
 use a variety of bioinformatic tools with confidence and greatly enhance your research efficiency and productivity.
+
+:::::::::::::::::
+
 
 :::::::::::::::::::::::::::::::::::::::::: prereq
 

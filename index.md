@@ -13,7 +13,7 @@ A lot of genomics analysis is done using command-line tools for three reasons:
 3. you will often need to customize your analyses, and command-line tools often enable more
    customization than the corresponding GUI tools (if in fact a GUI tool even exists).
 
-In a [previous lesson](https://otagobioinformaticsspringschool.github.io/shell-genomics-nesi/), you learned how to use the bash shell to interact with your computer through a command line interface. In this
+In a [previous lesson](https://otagobioinformaticsspringschool.github.io/shell-genomics-reannz/), you learned how to use the bash shell to interact with your computer through a command line interface. In this
 lesson, you will be applying this new knowledge to carry out a common genomics workflow - identifying variants among sequencing samples
 taken from multiple individuals within a population. We will be starting with a set of sequenced reads (`.fastq` files), performing
 some quality control steps, aligning those reads to a reference genome, and ending by identifying and visualizing variations among these

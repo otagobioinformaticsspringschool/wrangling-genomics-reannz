@@ -17,7 +17,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
+**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
 
 ## What is a shell script?
 

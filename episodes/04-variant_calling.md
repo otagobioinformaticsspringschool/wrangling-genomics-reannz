@@ -18,7 +18,7 @@ exercises: 40
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
+**This lesson has been adapted from the original [Data Carpentry - Wrangling Genomics](https://datacarpentry.org/wrangling-genomics/) to be run using the REANNZ HPC infrastructure as part of the Otago Bioinformatics Spring School instead of AWS.**
 
 We mentioned before that we are working with files from a long-term evolution study of an _E. coli_ population (designated Ara-3). Now that we have looked at our data to make sure that it is high quality, and removed low-quality base calls, we can perform variant calling to see how the population changed over time. We care how this population changed relative to the original population, _E. coli_ strain REL606. Therefore, we will align each of our samples to the _E. coli_ REL606 reference genome, and see what differences exist in our reads versus the genome.
 

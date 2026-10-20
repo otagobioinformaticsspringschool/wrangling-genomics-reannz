@@ -51,9 +51,9 @@ We are studying a population of _Escherichia coli_ (designated Ara-3), which wer
 
 The data are paired-end, so we will download two files for each sample. We will use the [European Nucleotide Archive](https://www.ebi.ac.uk/ena) to get our data. The ENA "provides a comprehensive record of the world's nucleotide sequencing information, covering raw sequencing data, sequence assembly information and functional annotation." The ENA also provides sequencing data in the fastq format, an important format for sequencing reads that we will be learning about today.
 
-To save time, the data has already been downloaded for you and placed in `~/obss_2025/genomic_dna/data/untrimmed_fastq`.
+To save time, the data has already been downloaded for you and placed in `~/obss_2026/genomic_dna/data/untrimmed_fastq`.
 
-Today we're going to be working inside of `~/obss_2025/genomic_dna`. The main directory structure for `genomic_dna/` (inside of `~/obss_2025/`) currently looks like this currently
+Today we're going to be working inside of `~/obss_2026/genomic_dna`. The main directory structure for `genomic_dna/` (inside of `~/obss_2026/`) currently looks like this currently
 
 ```bash
 genomic_dna/
@@ -67,7 +67,7 @@ genomic_dna/
 Now lets navigate to where the untrimmed fastq data is stored.
 
 ```bash
-cd ~/obss_2025/genomic_dna/data/untrimmed_fastq
+cd ~/obss_2026/genomic_dna/data/untrimmed_fastq
 ```
 
 To download the data, run the commands below.
@@ -87,8 +87,8 @@ Here we are using the `-p` option for `mkdir`. This option allows `mkdir` to cre
 It will take about 15 minutes to download the files.
 
 ```bash
-mkdir -p ~/obss_2025/data/untrimmed_fastq/
-cd ~/obss_2025/data/untrimmed_fastq
+mkdir -p ~/obss_2026/data/untrimmed_fastq/
+cd ~/obss_2026/data/untrimmed_fastq
 
 curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_1.fastq.gz
 curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_2.fastq.gz
@@ -218,7 +218,7 @@ At this point, lets validate that all the relevant tools are installed. If you a
 On the REANNZ HPC, we load the tools by running a script that has the needed software and versions specified.
 
 ```bash
-$ source ~/obss_2025/genomic_dna/modload.sh
+$ source ~/obss_2026/genomic_dna/modload.sh
 ```
 
 ## Modules
@@ -395,7 +395,7 @@ Here, we see positions within the read in which the boxes span a much wider rang
 We will now assess the quality of the reads that we downloaded. First, make sure you are still in the `untrimmed_fastq` directory
 
 ```bash
-$ cd ~/obss_2025/genomic_dna/data/untrimmed_fastq/
+$ cd ~/obss_2026/genomic_dna/data/untrimmed_fastq/
 ```
 
 ::::::::::::::::::::::::::::::::::::::: challenge
@@ -492,16 +492,16 @@ will move these
 output files into a new directory within our `results/` directory.
 
 ```bash
-$ mkdir -p ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads
-$ mv *.zip ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
-$ mv *.html ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
+$ mkdir -p ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads
+$ mv *.zip ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads/
+$ mv *.html ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads/
 ```
 
 Now we can navigate into this results directory and do some closer
 inspection of our output files.
 
 ```bash
-$ cd ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/
+$ cd ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads/
 ```
 
 ### Viewing the FastQC results
@@ -799,10 +799,10 @@ We can make a record of the results we obtained for all our samples
 
 by concatenating all of our `summary.txt` files into a single file
 using the `cat` command. We will call this `fastqc_summaries.txt` and move
-it to `~/obss_2025/genomic_dna/docs`.
+it to `~/obss_2026/genomic_dna/docs`.
 
 ```bash
-$ cat */summary.txt > ~/obss_2025/genomic_dna/docs/fastqc_summaries.txt
+$ cat */summary.txt > ~/obss_2026/genomic_dna/docs/fastqc_summaries.txt
 ```
 
 ::::::::::::::::::::::::::::::::::::::: challenge
@@ -819,7 +819,7 @@ test(s) did those samples fail?
 We can get the list of all failed tests using `grep`.
 
 ```bash
-$ cd ~/obss_2025/genomic_dna/docs
+$ cd ~/obss_2026/genomic_dna/docs
 $ grep FAIL fastqc_summaries.txt
 ```
 

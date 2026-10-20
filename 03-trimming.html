@@ -326,7 +326,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Trimming and Filtering</h1>
-        <p>Last updated on 2025-11-17 |
+        <p>Last updated on 2026-10-20 |
 
         <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/03-trimming.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -526,7 +526,7 @@ your code more readable.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/data/untrimmed_fastq</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">$</span> cd ~/obss_2026/genomic_dna/data/untrimmed_fastq</span></code></pre>
 </div>
 <p>We are going to run Trimmomatic on one of our paired-end samples.
 While using FastQC we saw that Nextera adapters were present in our
@@ -536,7 +536,7 @@ directory.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="ex">$</span> ~/obss_2025/genomic_dna/adapters/NexteraPE-PE.fa .</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="ex">$</span> ~/obss_2026/genomic_dna/adapters/NexteraPE-PE.fa .</span></code></pre>
 </div>
 <p>We will also use a sliding window of size 4 that will remove bases if
 their phred score is below 20 (like in our example above). We will also
@@ -704,7 +704,7 @@ Trimmomatic?</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">$</span> ls ~/obss_2025/genomic_dna/adapters/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">$</span> ls ~/obss_2026/genomic_dna/adapters/</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -722,7 +722,7 @@ to a new subdirectory within our <code>data/</code> directory.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/data/untrimmed_fastq</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="ex">$</span> cd ~/obss_2026/genomic_dna/data/untrimmed_fastq</span>
 <span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="ex">$</span> mkdir ../trimmed_fastq</span>
 <span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="ex">$</span> mv <span class="pp">*</span>.trim<span class="pp">*</span> ../trimmed_fastq</span>
 <span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a><span class="ex">$</span> cd ../trimmed_fastq</span>
@@ -859,7 +859,7 @@ important!</li>
   "url": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/03-trimming.html",
   "identifier": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/03-trimming.html",
   "dateCreated": "2015-03-24",
-  "dateModified": "2025-11-17",
+  "dateModified": "2026-10-20",
   "datePublished": "2026-10-20"
 }
 

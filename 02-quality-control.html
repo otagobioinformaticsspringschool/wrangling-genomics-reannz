@@ -327,7 +327,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Assessing Read Quality</h1>
-        <p>Last updated on 2025-11-17 |
+        <p>Last updated on 2026-10-20 |
 
         <a href="https://github.com/otagobioinformaticsspringschool/wrangling-genomics-reannz/edit/main/episodes/02-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -413,10 +413,10 @@ functional annotation.” The ENA also provides sequencing data in the
 fastq format, an important format for sequencing reads that we will be
 learning about today.</p>
 <p>To save time, the data has already been downloaded for you and placed
-in <code>~/obss_2025/genomic_dna/data/untrimmed_fastq</code>.</p>
+in <code>~/obss_2026/genomic_dna/data/untrimmed_fastq</code>.</p>
 <p>Today we’re going to be working inside of
-<code>~/obss_2025/genomic_dna</code>. The main directory structure for
-<code>genomic_dna/</code> (inside of <code>~/obss_2025/</code>)
+<code>~/obss_2026/genomic_dna</code>. The main directory structure for
+<code>genomic_dna/</code> (inside of <code>~/obss_2026/</code>)
 currently looks like this currently</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -432,7 +432,7 @@ currently looks like this currently</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">cd</span> ~/obss_2025/genomic_dna/data/untrimmed_fastq</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">cd</span> ~/obss_2026/genomic_dna/data/untrimmed_fastq</span></code></pre>
 </div>
 <p>To download the data, run the commands below.</p>
 <p>Here we are using the <code>-p</code> option for <code>mkdir</code>.
@@ -460,8 +460,8 @@ that directory.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/obss_2025/data/untrimmed_fastq/</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="bu">cd</span> ~/obss_2025/data/untrimmed_fastq</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/obss_2026/data/untrimmed_fastq/</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="bu">cd</span> ~/obss_2026/data/untrimmed_fastq</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a><span class="ex">curl</span> <span class="at">-O</span> ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_1.fastq.gz</span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="ex">curl</span> <span class="at">-O</span> ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_2.fastq.gz</span>
@@ -613,7 +613,7 @@ needed software and versions specified.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">$</span> source ~/obss_2025/genomic_dna/modload.sh</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">$</span> source ~/obss_2026/genomic_dna/modload.sh</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="modules">Modules<a class="anchor" aria-label="anchor" href="#modules"></a></h2>
@@ -804,7 +804,7 @@ directory</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/data/untrimmed_fastq/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">$</span> cd ~/obss_2026/genomic_dna/data/untrimmed_fastq/</span></code></pre>
 </div>
 <div id="exercise-1" class="callout challenge">
 <div class="callout-square">
@@ -913,16 +913,16 @@ will move these output files into a new directory within our
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a><span class="ex">$</span> mv <span class="pp">*</span>.zip ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a><span class="ex">$</span> mv <span class="pp">*</span>.html ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a><span class="ex">$</span> mv <span class="pp">*</span>.zip ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads/</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a><span class="ex">$</span> mv <span class="pp">*</span>.html ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
 </div>
 <p>Now we can navigate into this results directory and do some closer
 inspection of our output files.</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="ex">$</span> cd ~/obss_2026/genomic_dna/results/fastqc_untrimmed_reads/</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1284,11 +1284,11 @@ samples</p>
 <p>by concatenating all of our <code>summary.txt</code> files into a
 single file using the <code>cat</code> command. We will call this
 <code>fastqc_summaries.txt</code> and move it to
-<code>~/obss_2025/genomic_dna/docs</code>.</p>
+<code>~/obss_2026/genomic_dna/docs</code>.</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1" aria-label="code-block-43-1"></a><span class="ex">$</span> cat <span class="pp">*</span>/summary.txt <span class="op">&gt;</span> ~/obss_2025/genomic_dna/docs/fastqc_summaries.txt</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1" aria-label="code-block-43-1"></a><span class="ex">$</span> cat <span class="pp">*</span>/summary.txt <span class="op">&gt;</span> ~/obss_2026/genomic_dna/docs/fastqc_summaries.txt</span></code></pre>
 </div>
 <div id="exercise-3" class="callout challenge">
 <div class="callout-square">
@@ -1314,7 +1314,7 @@ test(s) did those samples fail?</p>
 <div class="codewrapper sourceCode" id="cb44">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1" aria-label="code-block-44-1"></a><span class="ex">$</span> cd ~/obss_2025/genomic_dna/docs</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1" aria-label="code-block-44-1"></a><span class="ex">$</span> cd ~/obss_2026/genomic_dna/docs</span>
 <span id="cb44-2"><a href="#cb44-2" tabindex="-1" aria-label="code-block-44-2"></a><span class="ex">$</span> grep FAIL fastqc_summaries.txt</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1455,7 +1455,7 @@ multiple files with a single command.</li>
   "url": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/02-quality-control.html",
   "identifier": "https://otagobioinformaticsspringschool.github.io/wrangling-genomics-reannz/02-quality-control.html",
   "dateCreated": "2015-03-24",
-  "dateModified": "2025-11-17",
+  "dateModified": "2026-10-20",
   "datePublished": "2026-10-20"
 }
 

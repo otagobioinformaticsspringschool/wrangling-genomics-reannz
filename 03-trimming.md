@@ -132,7 +132,7 @@ While using FastQC we saw that Nextera adapters were present in our samples.
 The adapter sequences came with the installation of trimmomatic, so we will first copy these sequences into our current directory.
 
 ```bash
-$ ~/obss_2026/genomic_dna/adapters/NexteraPE-PE.fa .
+$ cp ~/obss_2026/genomic_dna/adapters/NexteraPE-PE.fa .
 ```
 
 We will also use a sliding window of size 4 that will remove bases if their
